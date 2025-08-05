@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <title>RPG Battle RPS style</title>
+</head>
+<body>
+
+    <h1>RPS version RPG Battle !</h1>
+
+    <p>Welcome to my custom RPG Battle</p>
+
+    <div id="Battle-turn">Turn : </div>
+
+    <div id="battle-screen">
+
+           
+
+        <!-- screen monster part-->
+
+        <div id="monster-section">
+            
+                
+            <div id="monster-info">
+                <div id="monster-name">Shadow Wolf</div>
+
+                <!--Monster Barres -->
+                <div class="bar-container">
+                    <div id="monsterHpBar" class="bar-hp"></div>                    
+                </div>
+                <div class="bar-container">
+                    <div id="monsterEndBar" class="bar-endu"></div>
+                </div>
+
+                
+
+                <div id="monster-level">Level: <span id="monsterLevel"></span></div>
+                
+            </div>           
+            
+        </div>
+
+        <div id="monster-pic"></div>
+
+        <!-- screen player part -->
+
+        <div id="playerPic"></div>
+
+        <div id="player-section">
+            
+            <div id="player-info">
+
+                <div id="player-name">Hero</div>
+
+                <!--Player Barres -->
+                <div class="bar-container">
+                    <div id="playerHpBar" class="bar-hp"></div>                    
+                </div>
+                <div class="bar-container">
+                    <div id="playerEndBar" class="bar-endu"></div>
+                </div>
+
+                
+
+                <div id="player-level">Level: <span id="playerLevel"></span></div>
+                
+            </div>
+
+        </div>
+
+        
+
+        
+
+    </div>
+
+    
+      
+
+         
+
+
+        
+        <!-- menu Section-->
+        <div id="menu-section">
+            <div id="menu-text">Que va faire notre héros ?</div>
+
+            <button id="btn-back" class="hidden" onclick="showMainMenu()">
+                <img src="assets/back_button.png" title="Retour" alt="Back">
+            </button>
+
+            
+
+            <!--Menu principal-->
+            <div id="main-actions" class="menu-actions">
+                <button onclick="showAttackMenu()">Attaquer</button>
+                <button onclick="showMagicMenu()">Magie</button>
+                <button onclick="showObjectMenu()">Objets</button>
+                <button onclick="RunAway()">Fuite</button>
+            </div>
+            
+            <!-- Menu secondaire : Attaque -->
+            <div id="attack-actions" class="menu-actions hidden">
+                <button onclick="battle('Attack')">Regular Attack</button>
+                <button onclick="battle('Power')">Powerful Attack</button>
+                <button onclick="battle('Speed')">Speedy Attack</button>
+                <button onclick="battle('Defense')">Defensive Move</button>
+            </div>
+
+            <!-- Choix d'action pour catégorie UseObject -->
+        
+            <!-- Choix d'action pour catégorie AttMagical -->
+
+            <!-- Choix d'action pour catégorie RunAway --> 
+
+        </div>     
+    
+
+    
+        
+    
+    <div id="player-score"></div>
+    <div id="monster-score"></div>
+    <div id="Reset"></div>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
